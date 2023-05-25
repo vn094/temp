@@ -1,0 +1,14 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  margin-bottom: 180px;
+}
+
+.main-container div {
+  flex-basis: 100%;
+  margin: 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+  padding-bottom: 50px;
+}

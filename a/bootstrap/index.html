@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      /* Custom styles */
+      body {
+        padding-top: 60px;
+      }
+
+      .hero-section {
+        background-image: url("./travel.jpg");
+        z-index: 100;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .destination-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .image-container {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand">Travel Website</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div class="container text-center">
+        <h1>Explore the World</h1>
+        <p>Find your dream destination and plan your next adventure</p>
+        <form class="form-inline justify-content-center">
+          <div class="form-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter a destination"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Featured destinations section -->
+    <section class="content">
+      <div class="container">
+        <h2>Featured Destinations</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="destination-card">
+              <img
+                src="./temp4.jpg"
+                alt="Destination 1"
+                class="image-container"
+              />
+              <h3>Destination 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="destination-card">
+              <img
+                src="./temp2.jpg"
+                alt="Destination 2"
+                class="image-container"
+              />
+              <h3>Destination 2</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="destination-card">
+              <img
+                src="./temp3.jpg"
+                alt="Destination 3"
+                class="image-container"
+              />
+              <h3>Destination 3</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
