@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Login Form with validation Example</title>
+  </head>
+  <body>
+    <div>
+      <h1>Login</h1>
+      <input type="email" id="login_email" placeholder="email" />
+      <input type="password" id="login_password" placeholder="password" />
+      <button id="login-button">Login</button>
+
+      <br />
+      <br />
+      <h1>Create Account</h1>
+      <input type="text" id="register_username" placeholder="username" />
+      <input type="email" id="register_email" placeholder="email" />
+      <input type="password" id="register_password" placeholder="password" />
+      <button id="register-button">Create Account</button>
+    </div>
+
+    <script type="module">
+      const firebaseConfig = {
+        apiKey: "AIzaSyC0ELVu0itm_d4dBM0vEgvcfBlL4h7gTCU",
+        authDomain: "login-application-1cfcb.firebaseapp.com",
+        databaseURL:
+          "https://login-application-1cfcb-default-rtdb.firebaseio.com",
+        projectId: "login-application-1cfcb",
+        storageBucket: "login-application-1cfcb.appspot.com",
+        messagingSenderId: "966918583299",
+        appId: "1:966918583299:web:6210f8a2031ef94d4a4a36",
+      };
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      const loginButton = document.getElementById("login-button");
+      const register = document.getElementById("register-button");
+
+      // login user
+      loginButton.addEventListener("click", function login() {
+        const email = document.getElementById("login_email").value;
+        const password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            window.alert("Login successful");
+          })
+          .catch((error) => {
+            window.alert("Incorrect username and password");
+          });
+      });
+
+      // register user
+      register.addEventListener("click", function register() {
+        const email = document.getElementById("register_email").value;
+        const password = document.getElementById("register_password").value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            window.alert("Account created.");
+          })
+          .catch((error) => {
+            window.alert("Email already exists");
+          });
+      });
+    </script>
+  </body>
+</html>
