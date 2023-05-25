@@ -2,5 +2,5 @@
  Oracle Virtual Box Older Version (Used in the video) Dowload Link : https://bit.ly/3wFilHW
  Virtual Machine Disk (VMDK) Link : https://bit.ly/3MDZ940
 
-
+ipconfig
 scp filename.txt vagrant@10.0.2.16:/home/vagrant
